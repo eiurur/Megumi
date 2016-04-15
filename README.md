@@ -1,6 +1,12 @@
 Megumi
 ======
 
+[![Build Status](https://travis-ci.org/eiurur/Megumi.svg?branch=master)](https://travis-ci.org/eiurur/Megumi)
+[![bitHound Overall Score](https://www.bithound.io/github/eiurur/Megumi/badges/score.svg)](https://www.bithound.io/github/eiurur/Megumi)
+[![bitHound Dependencies](https://www.bithound.io/github/eiurur/Megumi/badges/dependencies.svg)](https://www.bithound.io/github/eiurur/Megumi/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/eiurur/Megumi/badges/devDependencies.svg)](https://www.bithound.io/github/eiurur/Megumi/master/dependencies/npm)
+
+
 ![Mwgumi](http://49.media.tumblr.com/a66096a9f30db85c28292931e4860c4e/tumblr_nfagc7sUIv1tlyjpto1_500.gif)
 
 > <a href="http://hheiyu.tumblr.com/post/103040653078" target="_blank">I have a thing for ohohojousama</a>
@@ -79,9 +85,9 @@ megumi.retrieve(opts).then( tweets => {
 
 ### sort
 
-- favorite
-- retweet
-- sum(favorite + retweet)
+- `favorite`
+- `retweet`
+- `sum`(favorite + retweet)
 
 default is `sum`
 
@@ -102,6 +108,6 @@ default is `all`
 
 ### num
 
-- 0 - 3200
+- `0` - `3200`
 
 default is `12`
