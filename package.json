@@ -11,6 +11,10 @@
     "Twitter",
     "image"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eiurur/Megumi.git"
+  },
   "author": "eiurur",
   "license": "MIT",
   "devDependencies": {
