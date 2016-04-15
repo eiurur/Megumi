@@ -37,12 +37,12 @@ const opts = {
   num: 12,
 };
 
-megumi.retrieve(opts).then( tweets => {
+megumi.retrieve(opts).then( tweet_list_of_only_the_image => {
 
-  console.log(tweets.length);
+  console.log(tweet_list_of_only_the_image.length);
   //=> 12
 
-  console.log(tweets[0]);
+  console.log(tweet_list_of_only_the_image[0]);
   /** =>
   { created_at: 'Wed Mar 16 11:54:21 +0000 2016',
     id: 710071702722490400,
@@ -59,7 +59,7 @@ megumi.retrieve(opts).then( tweets => {
     :
    */
 
-  console.log(tweets[1]);
+  console.log(tweet_list_of_only_the_image[1]);
   /** =>
   { created_at: 'Sun Mar 20 15:56:56 +0000 2016',
   id: 711582301956603900,
