@@ -2,13 +2,13 @@
 
 // const _       = require('lodash');
 // const assert  = require('power-assert');
-// const Sosyaku = require('../');
+// const Megumi = require('../');
 
 // const DATA_LENGTH   = 100;
 // const TASK_ERROR_MESSAGE = 'task_failure';
 // const PARAMETER_IS_INVALID_ERROR_MESSAGE = 'params is invalid';
 
-// describe('Sosyaku Abnormal', () => {
+// describe('Megumi Abnormal', () => {
 //   beforeEach( (done) => {
 //     this.dataList = Array.from(Array(DATA_LENGTH).keys()); // [0..99];
 //     this.task_failure = a => {
@@ -26,8 +26,8 @@
 //       dataList: this.dataList,
 //       task: this.task_failure,
 //     };
-//     const sosyaku = new Sosyaku(params);
-//     sosyaku.bite()
+//     const Megumi = new Megumi(params);
+//     Megumi.bite()
 //     .then( result => {
 //       assert(false);
 //       done();
@@ -40,8 +40,8 @@
 //   });
 
 //   // it('should return Promise.reject when dont pass constructor argument', (done) => {
-//   //   const sosyaku = new Sosyaku();
-//   //   sosyaku.bite()
+//   //   const Megumi = new Megumi();
+//   //   Megumi.bite()
 //   //   .then( result => {
 //   //     assert(false);
 //   //     done();

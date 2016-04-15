@@ -8,7 +8,6 @@ describe('Megumi Normal', () => {
 
   before( done => {
     const twitterKeys = process.env.TRAVIS ? process.env : require('../twitter.json');
-    console.log(twitterKeys);
     this.megumi = new Megumi(twitterKeys);
     done();
   });
