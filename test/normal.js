@@ -1,14 +1,15 @@
 'use strict';
 
-const _            = require('lodash');
-const assert       = require('power-assert');
-const Megumi       = require('../');
+const _           = require('lodash');
+const assert      = require('power-assert');
+const Megumi      = require('../');
+const TwitterUtil = require('../lib/TwitterUtil');
 
 describe('Megumi Normal', () => {
-
   before( done => {
     const twitterKeys = process.env.TRAVIS ? process.env : require('../twitter.json');
     this.megumi = new Megumi(twitterKeys);
+    this.isAllTweetHasImage = tweets => tweets.every(TwitterUtil.hasMedia);
     done();
   });
 
@@ -23,6 +24,7 @@ describe('Megumi Normal', () => {
     this.megumi.retrieve(opts).then( tweets => {
       assert(_.isArray(tweets));
       assert(tweets.length <= 12);
+      assert(this.isAllTweetHasImage(tweets));
       done();
     });
   });
@@ -38,6 +40,7 @@ describe('Megumi Normal', () => {
     this.megumi.retrieve(opts).then( tweets => {
       assert(_.isArray(tweets));
       assert(tweets.length <= 12);
+      assert(this.isAllTweetHasImage(tweets));
       done();
     });
   });
@@ -53,6 +56,7 @@ describe('Megumi Normal', () => {
     this.megumi.retrieve(opts).then( tweets => {
       assert(_.isArray(tweets));
       assert(tweets.length <= 12);
+      assert(this.isAllTweetHasImage(tweets));
       done();
     });
   });
@@ -68,6 +72,11 @@ describe('Megumi Normal', () => {
     this.megumi.retrieve(opts).then( tweets => {
       assert(_.isArray(tweets));
       assert(tweets.length <= 12);
+      assert(this.isAllTweetHasImage(tweets));
+      done();
+    })
+    .catch( err => {
+      console.error(err);
       done();
     });
   });
@@ -82,8 +91,11 @@ describe('Megumi Normal', () => {
     this.megumi.retrieve(opts).then( tweets => {
       assert(_.isArray(tweets));
       assert(tweets.length <= 12);
-      console.log(tweets[0]);
-      console.log(tweets[1]);
+      assert(this.isAllTweetHasImage(tweets));
+      done();
+    })
+    .catch( err => {
+      console.error(err);
       done();
     });
   });
