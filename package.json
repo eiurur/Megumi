@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:espower-babel/guess --timeout 6000000 test/**/*.js",
-    "lint": "eslint . --ext .js -c .eslintrc.json || true"
+    "test:abnormal": "mocha --compilers js:espower-babel/guess --timeout 60000 test/abnormal.js",
+    "lint": "eslint . --ext .js -c .eslintrc || true"
   },
   "keywords": [
     "Twitter",
